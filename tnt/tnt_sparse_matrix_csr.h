@@ -58,8 +58,8 @@ private:
 public:
 
 	Sparse_Matrix_CompRow(const Sparse_Matrix_CompRow &S);
-	Sparse_Matrix_CompRow(int M, int N, int nz, const T *val, 
-						const int *r, const int *c);
+	Sparse_Matrix_CompRow(int M, int N, int nz,  T *val, 
+						 int *r,  int *c);
     
 
 
@@ -93,7 +93,7 @@ public:
 */
 template <class T>
 Sparse_Matrix_CompRow<T>::Sparse_Matrix_CompRow(int M, int N, int nz,
-	const T *val, const int *r, const int *c) : val_(nz,val), 
+	 T *val,  int *r,  int *c) : val_(nz,val), 
 		rowptr_(M, r), colind_(nz, c), dim1_(M), dim2_(N) {}
 
 

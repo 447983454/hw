@@ -181,7 +181,8 @@ void FLUID_3D::step()
 	float *src = _density;
 	// string prefix = string("./result/without_density_fullxy_");
 	string prefix = string("./result/with_density_fullxy_");
-	writeImageSliceXY(src, _res, _res[2]/2, prefix, _totalSteps);
+	if(_totalSteps%10==0)
+		writeImageSliceXY(src, _res, _res[2]/2, prefix, _totalSteps);
 
 	// artificial damping -- this is necessary because we use a
 	// collated grid, and at very coarse grid resolutions, banding

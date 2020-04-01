@@ -1,2 +1,5 @@
 *.o
 *.exe
+result/
+FLUID_3D
+

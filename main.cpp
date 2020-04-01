@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
   cout << " Physically-based Eulerian Fluid Simulation: Smoke Simulator " << endl;
   cout << "=========================================================================" << endl;
 
-  int xRes = 48;
-  int yRes = 64;
-  int zRes = 48;
+  int xRes = 48+2;
+  int yRes = 64+2;
+  int zRes = 48+2;
   int amplify = 1;
   xRes *= amplify;
   yRes *= amplify;
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
   // create output directories
   system("mkdir result");
   
-  // 声明，即调用了构造函数
+
   FLUID_3D fluid(xRes, yRes, zRes, amplify);
   for (int x = 0; x < 100; x++)
   {
