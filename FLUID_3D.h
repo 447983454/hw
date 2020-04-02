@@ -9,7 +9,9 @@
 #include "mtxlib.h"
 #include "EIGENVALUE_HELPER.h"
 #include "LU_HELPER.h"
-
+// #include <nmmintrin.h>
+#include <emmintrin.h>
+// #include <pmmintrin.h>
 using namespace std;
 using namespace BasicVector;
 
@@ -100,6 +102,7 @@ class FLUID_3D
 		void project();
 		void diffuseHeat();
 		void solvePressure(float* field, float* b, unsigned char* skip);
+		void solvePressure_sse(float* field, float* b, unsigned char* skip);
 		void solveHeat(float* field, float* b, unsigned char* skip);
 
 		// handle obstacle boundaries

@@ -339,7 +339,8 @@ void FLUID_3D::project()
 	copyBorderAll(_pressure);
 
 	// solve Poisson equation
-	solvePressure(_pressure, _divergence, _obstacles);
+	// solvePressure(_pressure, _divergence, _obstacles);
+	solvePressure_sse(_pressure, _divergence, _obstacles);
 
 	// project out solution
 	float invDx = 1.0f / _dx;

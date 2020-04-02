@@ -11,7 +11,7 @@ PNG_INCLUDE =  -I/opt/local/include
 PNG_LIBS =  -I/opt/local/lib  
 
 LDFLAGS    =  $(PNG_LIBS)-lz -lpng $(OPENMPLD_FLAGS)
-CFLAGS     =  -c -Wall -I./ $(PNG_INCLUDE) $(OPENMP_FLAGS) -O3 -Wno-unused
+CFLAGS     =  -msse2 -march=corei7 -c -Wall -I./ $(PNG_INCLUDE) $(OPENMP_FLAGS) -O3 -Wno-unused
 EXECUTABLE = FLUID_3D
 
 SOURCES    = main.cpp FLUID_3D.cpp FLUID_3D_SOLVERS.cpp FLUID_3D_STATIC.cpp SPHERE.cpp

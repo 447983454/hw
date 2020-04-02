@@ -2,4 +2,5 @@
 *.exe
 result/
 FLUID_3D
-
+check/
+*.png
